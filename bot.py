@@ -9,7 +9,7 @@ from aiogram import Bot, Dispatcher, executor, types
 from bs4 import BeautifulSoup
 
 ENV = bool(os.environ.get('ENV', True))
-TOKEN = os.environ.get("TOKEN", None)
+
 BLACKLISTED = os.environ.get("BLACKLISTED", None) 
 PREFIX = "!/"
 
@@ -17,7 +17,7 @@ PREFIX = "!/"
 logging.basicConfig(level=logging.INFO)
 
 # Initialize bot and dispatcher
-bot = Bot(token=TOKEN, parse_mode=types.ParseMode.HTML)
+bot = Bot(token="5416334786:AAHSKGy4V-WoNlm2Dt962dJrYd1m_3fH7Mo", parse_mode=types.ParseMode.HTML)
 dp = Dispatcher(bot)
 
 ###USE YOUR ROTATING PROXY### NEED HQ PROXIES ELSE WONT WORK UPDATE THIS FILED
