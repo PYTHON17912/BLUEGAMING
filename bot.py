@@ -10,7 +10,7 @@ from bs4 import BeautifulSoup
 
 ENV = bool(os.environ.get('ENV', True))
 
-BLACKLISTED = os.environ.get("BLACKLISTED", None) 
+BLACKLISTED = "559558, 510805, 434256, 524499"
 PREFIX = "!/"
 
 # Configure logging
@@ -38,7 +38,7 @@ rnd = ''.join(random.choices(string.ascii_lowercase +
 async def helpstr(message: types.Message):
     await message.answer_chat_action("typing")
     await message.reply(
-        "Hello how to use <code>/chk cc/mm/yy/cvv</code>\nREPO <a href='https://github.com/xbinner18/Mrbannker'>Here</a>"
+        "Hello Enter<code>/chk To Proceed CC</code> <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a>"
     )
     
 
@@ -97,7 +97,7 @@ TOOK ➟ <b>{toc - tic:0.4f}</b>(s)
 async def binio(message: types.Message):
     await message.answer_chat_action("typing")
     BIN = message.text[len("/bin "): 11]
-    if len(BIN) < 6:
+    if len(BIN) < 5:
         return await message.reply("Send bin not ass")
     if not BIN:
         return await message.reply("Did u Really Know how to use me.")
@@ -131,11 +131,7 @@ async def ch(message: types.Message):
             "<code>Send Card /chk cc|mm|yy|cvv.</code>"
         )   
     BIN = cc[:6]
-    if BIN in BLACKLISTED:
-        return await message.reply(
-            "<b>BLACKLISTED BIN</b>"
-            )
-    # get guid muid sid
+
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4571.0 Safari/537.36 Edg/93.0.957.0",
         "Accept": "application/json, text/plain, */*",
