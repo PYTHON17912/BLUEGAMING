@@ -26,8 +26,7 @@ res = r.partition('\n')[0]
 proxy = {"http": f"http://{res}"}
 session = requests.session()
 
-session.proxies = proxy #UNCOMMENT IT AFTER PROXIES
-
+session.proxies = proxy #
 #random str GEN FOR EMAIL
 N = 10
 rnd = ''.join(random.choices(string.ascii_lowercase +
@@ -37,10 +36,10 @@ rnd = ''.join(random.choices(string.ascii_lowercase +
 @dp.message_handler(commands=['start', 'help'], commands_prefix=PREFIX)
 async def helpstr(message: types.Message):
     await message.answer_chat_action("typing")
-    
-    await message.reply(f"""
-<b>Hello Enter<code>/chk To Proceed CC</code></b>➟ <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a>
-""")
+    await message.reply(
+        "<code>/chk cc/mm/yy/cvv BOT BY @im_angel_girl0</code>"
+    )
+
 @dp.message_handler(commands=['tv'], commands_prefix=PREFIX)
 async def tv(message: types.Message):
     tic = time.perf_counter()
