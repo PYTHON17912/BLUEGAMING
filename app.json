@@ -5,12 +5,12 @@
       "value": "ANYTHING"
     },
     "TOKEN": {
-      "description": "Your bot token, as a string.",
+      "description": "5416334786:AAHSKGy4V-WoNlm2Dt962dJrYd1m_3fH7Mo",
       "value": "",
       "required": true
     },
     "BLACKLISTED": {
-      "description": "type your url where hosted api.php",
+      "description": "https://kraftonstore.com/Folder/apisss/api.php",
       "value": "559558, 510805, 434256, 524499",
       "required": true
     }
