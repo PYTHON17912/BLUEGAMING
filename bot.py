@@ -37,9 +37,8 @@ rnd = ''.join(random.choices(string.ascii_lowercase +
 async def helpstr(message: types.Message):
     await message.answer_chat_action("typing")
     await message.reply(
-        "<code>/chk cc/mm/yy/cvv BOT BY @im_angel_girl0</code>"
-    )
-
+        "Hello how to use <code>/chk cc/mm/yy/cvv</code>\n @im_angel_girl0"
+    ) 
 @dp.message_handler(commands=['tv'], commands_prefix=PREFIX)
 async def tv(message: types.Message):
     tic = time.perf_counter()
