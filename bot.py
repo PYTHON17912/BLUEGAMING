@@ -37,11 +37,10 @@ rnd = ''.join(random.choices(string.ascii_lowercase +
 @dp.message_handler(commands=['start', 'help'], commands_prefix=PREFIX)
 async def helpstr(message: types.Message):
     await message.answer_chat_action("typing")
-    await message.reply(
-        "Hello Enter<code>/chk To Proceed CC</code> <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a>"
-    )
     
-
+    await message.reply(f"""
+<b>Hello Enter<code>/chk To Proceed CC</code></b>➟ <a href="tg://user?id={message.from_user.id}">{message.from_user.first_name}</a>
+""")
 @dp.message_handler(commands=['tv'], commands_prefix=PREFIX)
 async def tv(message: types.Message):
     tic = time.perf_counter()
